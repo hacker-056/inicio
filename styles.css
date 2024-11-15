@@ -117,7 +117,7 @@ body {
 
   /* Mantener 2 columnas en pantallas muy pequeñas */
   .thumbnail {
-    width: 45%; /* Ajustar para que queden 2 en una fila */
+    width: auto; /* Ajustar para que queden 2 en una fila */
     height: auto;
   }
 
