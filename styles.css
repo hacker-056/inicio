@@ -10,9 +10,10 @@ body {
   font-family: Arial, sans-serif;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start; /* Cambiado a flex-start para que el contenido empuje hacia abajo */
   min-height: 100vh;
-  overflow: hidden;
+  overflow-y: auto; /* Permitir desplazamiento vertical */
+  flex-direction: column; /* Apilar los elementos de arriba a abajo */
 }
 
 .container {
@@ -20,6 +21,7 @@ body {
   max-width: 100%; /* Ocupar todo el ancho */
   width: 100%;
   padding: 20px;
+  margin-top: 20px; /* Espacio superior para que no toque el borde superior */
 }
 
 .title {
@@ -45,21 +47,21 @@ body {
 
 .video-list {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Dos columnas */
-  gap: 20px; /* Reducido el espacio entre las miniaturas */
-  justify-items: auto;
-  max-width: 90%; /* Ocupar todo el ancho */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  justify-items: center;
+  max-width: 100%;
 }
 
 .thumbnail {
   cursor: pointer;
-  width: 100%; /* Ajustado al 100% del contenedor */
+  width: 100%;
   height: auto;
   border: 2px solid #ff0044;
   border-radius: 8px;
   padding: 5px;
   transition: transform 0.3s ease;
-  margin-bottom: 5px; /* Reducido el margen inferior */
+  margin-bottom: 5px;
 }
 
 .thumbnail:hover {
@@ -80,9 +82,9 @@ body {
 }
 
 /* Media Query para pantallas pequeñas */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   body {
-    height: 90vh; /* Ocupa toda la pantalla */
+    height: auto; /* Permite que el cuerpo se expanda hacia abajo si es necesario */
   }
 
   .title {
@@ -93,14 +95,13 @@ body {
     height: 300px;
   }
 
-  /* Miniaturas ocupando todo el ancho en pantallas pequeñas */
   .video-list {
-    grid-template-columns: repeat(2, 1fr); /* Mantener dos columnas */
-    gap: 20px; /* Reducido el espacio entre miniaturas */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
   }
 
   .thumbnail {
-    width: 100%; /* Ajuste a 100% de la pantalla para mejorar la visualización */
+    width: 100%;
     height: auto;
   }
 }
@@ -108,7 +109,7 @@ body {
 /* Media Query para pantallas muy pequeñas */
 @media (max-width: 480px) {
   body {
-    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    height: auto;
   }
 
   .title {
@@ -119,14 +120,13 @@ body {
     height: 200px;
   }
 
-  /* Miniaturas más anchas en pantallas pequeñas */
   .video-list {
-    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
-    gap: 20px; /* Espacio reducido entre miniaturas */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
   }
 
   .thumbnail {
-    width: 100%; /* Ocupa todo el ancho */
+    width: 100%;
     height: auto;
   }
 
@@ -134,4 +134,3 @@ body {
     font-size: 0.8em;
   }
 }
-
