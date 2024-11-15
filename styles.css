@@ -17,7 +17,7 @@ body {
 }
 
 .container {
-  text-align: left;
+  text-align: center;
   width: 90%;
   padding: 20px;
   margin-top: 20px;
@@ -39,7 +39,7 @@ body {
 }
 
 .video-player iframe {
-  width: 100%;
+  width: 350px;
   height: 350px;
   border: none;
 }
@@ -68,8 +68,8 @@ body {
 }
 
 .thumbnail img {
-  width: 100%;
-  height: auto;
+  width: 350px;
+  height: 350px;
   border-radius: 5px;
 }
 
@@ -86,7 +86,7 @@ body {
   }
 
   .title {
-    font-size: 1.5em;
+    font-size: 5em;
   }
 
   .video-player iframe {
@@ -96,10 +96,13 @@ body {
   .video-list {
     gap: 15px; /* Espacio entre videos */
     margin-top: 20px;
+     width: 350px;
+    height: 300px;
   }
 
   .thumbnail {
-    width: 100%;
+    width: 350px;
+    height: 300px;
   }
 }
 
@@ -113,7 +116,7 @@ body {
   }
 
   .video-player iframe {
-    height: 200px;
+    height: 350px;
   }
 
   .video-list {
@@ -122,7 +125,7 @@ body {
   }
 
   .thumbnail {
-    width: 100%;
+    width: 350px;
   }
 
   .thumbnail p {
