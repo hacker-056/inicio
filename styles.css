@@ -46,7 +46,7 @@ body {
 .video-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Dos columnas */
-  gap: 20px; /* Espacio entre las miniaturas */
+  gap: 10px; /* Espacio entre las miniaturas */
   justify-items: center;
   max-width: 100%; /* Aseguramos que ocupe todo el ancho */
 }
