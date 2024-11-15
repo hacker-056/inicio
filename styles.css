@@ -54,7 +54,7 @@ body {
 /* Ajustes para las miniaturas */
 .thumbnail {
   cursor: pointer;
-  width: 90%; /* Ajustamos el tamaño para que ocupe el 90% de la pantalla */
+  width: 400px; /* Ajustamos el tamaño para que ocupe el 90% de la pantalla */
   height: 400px;
   border: 2px solid #ff0044;
   border-radius: 8px;
