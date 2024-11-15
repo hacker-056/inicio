@@ -53,7 +53,7 @@ body {
 
 .thumbnail {
   cursor: pointer;
-  width: 48%; /* Ancho ajustado de las miniaturas */
+  width: 100%; /* Ajustado al 100% del contenedor */
   height: auto;
   border: 2px solid #ff0044;
   border-radius: 8px;
@@ -81,6 +81,10 @@ body {
 
 /* Media Query para pantallas pequeñas */
 @media (max-width: 768px) {
+  body {
+    height: 100vh; /* Ocupa toda la pantalla */
+  }
+
   .title {
     font-size: 1.5em;
   }
@@ -89,15 +93,24 @@ body {
     height: 300px;
   }
 
-  /* Miniaturas más anchas en pantallas pequeñas */
+  /* Miniaturas ocupando todo el ancho en pantallas pequeñas */
+  .video-list {
+    grid-template-columns: repeat(2, 1fr); /* Mantener dos columnas */
+    gap: 5px; /* Reducido el espacio entre miniaturas */
+  }
+
   .thumbnail {
-    width: 48%; /* Ocupa casi la mitad del ancho del contenedor */
+    width: 100%; /* Ajuste a 100% de la pantalla para mejorar la visualización */
     height: auto;
   }
 }
 
 /* Media Query para pantallas muy pequeñas */
 @media (max-width: 480px) {
+  body {
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+  }
+
   .title {
     font-size: 1.2em;
   }
@@ -106,9 +119,14 @@ body {
     height: 200px;
   }
 
-  /* Miniaturas más anchas en pantallas muy pequeñas */
+  /* Miniaturas más anchas en pantallas pequeñas */
+  .video-list {
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    gap: 5px; /* Espacio reducido entre miniaturas */
+  }
+
   .thumbnail {
-    width: 48%; /* Ocupa casi la mitad del ancho en pantallas muy pequeñas */
+    width: 100%; /* Ocupa todo el ancho */
     height: auto;
   }
 
@@ -116,3 +134,4 @@ body {
     font-size: 0.8em;
   }
 }
+
