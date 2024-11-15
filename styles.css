@@ -47,15 +47,15 @@ body {
 .video-list {
   display: flex;
   flex-direction: column; /* Organiza los videos uno debajo del otro */
-  gap: 20px; /* Aumenta el espacio entre los videos */
+  gap: 100px; /* Aumenta el espacio entre los videos */
   margin-top: 40px;
   margin-bottom: 40px;
 }
 
 .thumbnail {
   cursor: pointer;
-  width: 100%; /* Ocupa todo el ancho disponible */
-  height: auto;
+  width: 500px; /* Ocupa todo el ancho disponible */
+  height: 500px;
   border: 2px solid #ff0044;
   border-radius: 8px;
   padding: 5px;
@@ -105,7 +105,7 @@ body {
 
 @media (max-width: 480px) {
   .container {
-    width: 100%;
+    width: 480px;
   }
 
   .title {
@@ -117,7 +117,7 @@ body {
   }
 
   .video-list {
-    gap: 10px; /* Espacio entre videos */
+    gap: 100px; /* Espacio entre videos */
     margin-top: 10px;
   }
 
