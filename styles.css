@@ -46,8 +46,8 @@ body {
 
 .video-list {
   display: flex;
-  flex-direction: column; /* Videos organizados uno debajo de otro */
-  gap: 20px; /* Separación entre videos */
+  flex-direction: column; /* Organiza los videos uno debajo del otro */
+  gap: 20px; /* Aumenta el espacio entre los videos */
   margin-top: 40px;
   margin-bottom: 40px;
 }
@@ -60,7 +60,7 @@ body {
   border-radius: 8px;
   padding: 5px;
   transition: transform 0.3s ease;
-  margin: 0 auto; /* Centrar las miniaturas */
+  margin: 0 auto; /* Centra las miniaturas dentro del contenedor */
 }
 
 .thumbnail:hover {
@@ -94,7 +94,7 @@ body {
   }
 
   .video-list {
-    gap: 15px;
+    gap: 15px; /* Espacio entre videos */
     margin-top: 20px;
   }
 
@@ -117,7 +117,7 @@ body {
   }
 
   .video-list {
-    gap: 10px;
+    gap: 10px; /* Espacio entre videos */
     margin-top: 10px;
   }
 
